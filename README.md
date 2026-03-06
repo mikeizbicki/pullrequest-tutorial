@@ -1,5 +1,15 @@
 # Pull Request Tutrial
 
+<img src=img/git-meme.jpg width=300px />
+
+Git has a well-earned reputation for being hard.
+But it is also fundamental to working as a programmer,
+and mastering git has become even more important with the rise of AI programming.
+
+This tutorial walks you through the concepts of *branching*, *merging*, and *pull requests*.
+These are the most important concepts to know in the entire CS/DS curriculum.
+You cannot get a good internship/job without perfect understanding of this material.
+
 ## Part 1: Terminal/Git tutorial
 
 Follow the instructions in the [git-tutorial](git-tutorial) folder to learn more terminal and git commands.
