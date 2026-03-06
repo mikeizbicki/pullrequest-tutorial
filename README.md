@@ -1,4 +1,4 @@
-# Pull Request Tutrial
+# Git Tutrial
 
 <img src=img/git-meme.jpg width=300px />
 
