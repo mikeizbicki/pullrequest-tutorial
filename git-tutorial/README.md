@@ -1,10 +1,9 @@
-# Terminal/Git Tutorial
+# Shell/Git Tutorial
 
-This tutorial will walk you through basic terminal and git commands.
+This tutorial will walk you through basic shell and git commands.
+You should complete this tutorial by typing all commands within code blocks into your terminal.
 
 <img src=img/hacker.jpg width=300px />
-
-You should complete this tutorial by typing all commands within code blocks into your terminal.
 
 > **NOTE:**
 > There is a lot of material in these instructions related to git that we have not covered in class.
