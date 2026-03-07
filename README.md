@@ -1,6 +1,5 @@
 # Git Tutorial
 
-
 <img src=img/git-meme.jpg width=300px />
 
 Git has a well-earned reputation for being hard.
