@@ -682,6 +682,8 @@ we make it easy to have someone fixing the bug while someone else is adding new 
 
 ## Merge conflicts
 
+<img src=img/winter.jpg width=400px />
+
 Our `userinput` feature is also ready now.
 We've tested it and are sure it's working correctly.
 It's time to merge this feature with the `master` branch.
@@ -703,7 +705,11 @@ Automatic merge failed; fix conflicts and then commit the result.
 ```
 
 This error is called a *merge conflict* and is one of the hardest concepts for new git users to understand.
-Why did this happen?
+But understanding merge conflicts is absolutely necessary for collaborating with other humans, or collaborating (effectively) with AI.
+
+<img src=img/conflict.jpg width=300px />
+
+So why did this happen?
 
 In our `bugfix` branch above, git automatically merged the `message.py` file for us.
 It could do this because the `message.py` file in the `master` branch did not change after we created the `bugfix` branch.
