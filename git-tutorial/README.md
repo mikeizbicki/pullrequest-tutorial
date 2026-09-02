@@ -792,6 +792,97 @@ This makes it more likely that multiple branches will not edit the same files.
 Of course, in most projects merge conflicts will be inevitable.
 That's just the reality of working on large projects with many team members.
 
+## More git log
+
+Understanding the git DAG is crucial to using git effectively.
+For example, the DAG helps us understand
+1. when to merge,
+1. whether those merges will cause conflicts, and
+1. how to resolve those conflicts.
+It is therefore often useful to be able to visualize the DAG in the command line.
+
+Fortunately, git has built-in tools to help.
+If we add the `--graph` flag to `git log`, it will show us an ASCII version of the DAG next to the standard log output.
+At this point, your DAG in ASCII form should look like
+```
+$ git log
+*   commit 78bf265f91796f1a7633f17533c10992ee5a759f
+|\  Merge: dee6415 2d79bd1
+| | Author: Mike Izbicki <mike@izbicki.me>
+| | Date:   Wed Sep 2 11:47:46 2026 -0700
+| | 
+| |     solved merge conflict between userinput and master branches
+| | 
+| * commit 2d79bd12ce47559d4ce0aa8f225aa2dc16687d83
+| | Author: Mike Izbicki <mike@izbicki.me>
+| | Date:   Wed Sep 2 11:44:47 2026 -0700
+| | 
+| |     updated README
+| | 
+| * commit 385862c229e4e041ec259f8c7fdd9deb0ea29683
+| | Author: Mike Izbicki <mike@izbicki.me>
+| | Date:   Wed Sep 2 11:44:02 2026 -0700
+| | 
+| |     added user input
+| | 
+* | commit dee641539b449d0117d3771c6c60ac2f966b35ef
+|/  Author: Mike Izbicki <mike@izbicki.me>
+|   Date:   Wed Sep 2 11:46:22 2026 -0700
+|   
+|       fixed the message bug
+| 
+* commit 731d1924690d5315487536ceaf98faa99944464f
+| Author: Mike Izbicki <mike@izbicki.me>
+| Date:   Wed Sep 2 11:40:50 2026 -0700
+| 
+|     modified the README
+| 
+* commit c9125fcff118ac42493422cb80f5d0299b643dd3
+| Author: Mike Izbicki <mike@izbicki.me>
+| Date:   Wed Sep 2 11:40:17 2026 -0700
+| 
+|     added the first code
+| 
+* commit 34f733bf8b25567844d4e2bea3c14ee4d850de49
+  Author: Mike Izbicki <mike@izbicki.me>
+  Date:   Wed Sep 2 11:39:35 2026 -0700
+  
+      my first commit
+```
+> **NOTE:**
+> Depending on the size of your terminal, this git log message may be too large to fit on a single screen.
+> If that's the case, then git places the output in the *pager*,
+> which let's you scroll up/down with the arrow keys and use standard vim movements (like `/` to search).
+> Pressing `q` will quit the pager and send you back to the shell.
+
+This output has a lot more info than the pictures we've been drawing, and so is a bit too cluttered and hard to read.
+A common flag to combine with the `--graph` flag is the `--oneline` flag, which gives us a condensed version of the output:
+```
+$ git log --graph --oneline
+*   78bf265 (HEAD -> master) solved merge conflict between userinput and master branches
+|\  
+| * 2d79bd1 (userinput) updated README
+| * 385862c added user input
+* | dee6415 (bugfix) fixed the message bug
+|/  
+* 731d192 modified the README
+* c9125fc added the first code
+* 34f733b my first commit
+```
+Above, each line starting with `*` is a commit, and the `|` and `/` "arrows" show the DAG relationships.
+The labels in parentheses like `(userinput)` and `(bugfix)` indicate where these branch labels are pointing to.
+The label `(HEAD -> master)` indicates that the current branch is `master`---in git terminology `HEAD` is the branch that you have currently checked out.
+In some commands, `HEAD` is also abbreviated as `*`, for example
+```
+$ git branch
+  bugfix
+* master
+  userinput
+```
+The takeaway is that working programmers regularly use `git log --graph --oneline` to understand what is going on in their git repos,
+and you should to.
+This command will be especially useful when understanding quiz problems.
+
 ## Cleaning up
 
 Programmers often talk about maintaining *clean* git histories.
@@ -814,14 +905,9 @@ The resulting DAG is
 <img src="img/12b.png?raw=true"
 </p>
 
-You're done!
-There is nothing to submit for this tutorial :)
+## Submission
 
-<!--
-## Exercise
-
-Given the same repo above, draw the DAG that results after running the following commands.
-(You do not have to turn in the drawing.)
+Given the same repo above, run the commands below.
 
 ```
 $ echo "everything is awesome" > README
@@ -840,9 +926,8 @@ $ ls
 $ git merge new_feature
 ```
 
-**HINT:**
-Running `git log --graph` will show an ASCII version of the graph.
-
-You should check the [git cheatsheet](https://github.com/mikeizbicki/ucr-cs100/blob/2015winter/textbook/cheatsheets/git-cheatsheet.md) to figure out what the `git checkout -b` command does.
-
--->
+Then run the command
+```
+$ git log --graph --oneline
+```
+Paste the output of that command into canvas.
