@@ -899,11 +899,26 @@ $ git branch -d userinput
 $ git branch -d bugfix
 ```
 
-The resulting DAG is
+The resulting DAG in picture format is
 
 <p align=center>
 <img src="img/12b.png?raw=true"
 </p>
+
+or in ASCII format is
+
+```
+$ git log --graph --oneline
+*   78bf265 (HEAD -> master) solved merge conflict between userinput and master branches
+|\  
+| * 2d79bd1 updated README
+| * 385862c added user input
+* | dee6415 fixed the message bug
+|/  
+* 731d192 modified the README
+* c9125fc added the first code
+* 34f733b my first commit
+```
 
 ## Submission
 
