@@ -218,7 +218,7 @@ When the `parse_args` function is executed,
 the `argparse` module checks if the command line arguments are valid.
 If they are not, then the program prints an error message describing how to use the software correctly and then aborts.
 
-You can also run your program by launching python interactively, importing your module into the repl, and the calling the main function with the following commands:
+You can also run your program by launching python interactively, importing your module into the repl, and then calling the main function with the following commands:
 
 ```
 $ python3 -i message.py
@@ -852,7 +852,7 @@ $ git log
 > **NOTE:**
 > Depending on the size of your terminal, this git log message may be too large to fit on a single screen.
 > If that's the case, then git places the output in the *pager*,
-> which let's you scroll up/down with the arrow keys and use standard vim movements (like `/` to search).
+> which lets you scroll up/down with the arrow keys and use standard vim movements (like `/` to search).
 > Pressing `q` will quit the pager and send you back to the shell.
 
 This output has a lot more info than the pictures we've been drawing, and so is a bit too cluttered and hard to read.
@@ -880,7 +880,7 @@ $ git branch
   userinput
 ```
 The takeaway is that working programmers regularly use `git log --graph --oneline` to understand what is going on in their git repos,
-and you should to.
+and you should too.
 This command will be especially useful when understanding quiz problems.
 
 ## Cleaning up
