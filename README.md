@@ -1,4 +1,5 @@
-# Git Tutrial
+# Git Tutorial
+
 
 <img src=img/git-meme.jpg width=300px />
 
