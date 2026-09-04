@@ -218,7 +218,7 @@ When the `parse_args` function is executed,
 the `argparse` module checks if the command line arguments are valid.
 If they are not, then the program prints an error message describing how to use the software correctly and then aborts.
 
-You can also run your program by launching python interactively, importing your module into the repl, and then calling the main function with the following commands:
+You can also run your program by launching python interactively, importing your module into the repo, and then calling the main function with the following commands:
 
 ```
 $ python3 -i message.py
