@@ -1,11 +1,10 @@
-# Git Tutrial
-
+README.md
+# Git Tutorial
 <img src=img/git-meme.jpg width=300px />
 
 Git has a well-earned reputation for being hard.
 But it is also fundamental to working as a programmer,
 and mastering git has become even more important with the rise of AI programming.
-
 This tutorial walks you through the concepts of *branching*, *merging*, and *pull requests*.
 These are the most important concepts to know in the entire CS/DS curriculum.
 You cannot get a good internship/job without perfect understanding of this material.
@@ -33,4 +32,5 @@ and also how to learn material for yourself.
 > But, if you ever find mistakes in any class repo,
 > please submit a pull request.
 > I will accept the pull request and give you extra credit.
-> Then everyone will have the benefit of having the mistake fixed.
+> Then everyone will have the benef
+it of having the mistake fixed.
